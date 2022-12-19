@@ -13,9 +13,9 @@ let button10;
 let button11;
 var a=0;
 var b=0;
-var c=0;
-var d=0;
-let amp;
+var c=0; //0은 속도가 없음을 나타냄 (여기서 c와 d를 1이라고 해 보시오)
+var d=0; //0은 속도가 없을을 나타냄
+let amp; 
 var rB;
 let music;
 
@@ -74,7 +74,7 @@ function togglePlaying1(){
             // musicFile.jump(200);
             // rB=musicFile.reverseBuffer();
             musicFile.setVolume(vol);
-            musicFile.rate(1);
+            musicFile.rate(1); //변수값이 아니고 생으로 숫자1을 넣었음. 속도는 변하지만 변수 값은 그대로 0임.
             musicFile.play();
             button.html('pause');
         }else{
@@ -87,7 +87,7 @@ function togglePlaying1(){
             // rB=musicFile.reverseBuffer();
             // musicFile2.jump(200);
             musicFile.setVolume(vol);
-            musicFile.rate(1);
+            musicFile.rate(1); //변수값이 아니고 생으로 숫자1을 넣었음. 속도는 변하지만 변수 값은 그대로 0임.
             musicFile2.play();
             button.html('pause');
         }else{
@@ -152,12 +152,12 @@ function togglePlaying1(){
 
  function togglePlaying7(){
     if(music ===1){
-        c = c+0.5;
-        musicFile.rate(c);
+        c = c+0.5; //여기서 C는 1이라고 생각하고 계산 시켰겠지만, 사실은 0이었음. 
+        musicFile.rate(c); //그러므로 이 코드는 1.5가 아니고 0,5(속도가 느려짐)
     }
     if(music ===2){
-        d = d+0.5;
-        musicFile2.rate(d);
+        d = d+0.5; //여기서 C는 1이라고 생각하고 계산 시켰겠지만, 사실은 0이었음. 
+        musicFile2.rate(d); //그러므로 이 코드는 1.5가 아니고 0,5(속도가 느려짐)
     }
 
  }
